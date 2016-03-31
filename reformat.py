@@ -18,7 +18,7 @@ def bufferFile(f , temp):
             count += 1
 # remove 1st 17 and last chars, also removes period in id.
 def cleanId(s):
-    return s[17:-1].replace('.','')
+    return s[17:-1].replace('.1','')
 # removes _ from scaffold position
 def cleanPosition(s):
     return s.replace('_', '')
@@ -43,7 +43,7 @@ def writeToFile(corrected):
     print ('Scaffold_ID,Scaffold_position,LG,Genetic_position')
     for i in range (len(corrected)):
         l = corrected[i];
-        print str(l[0])+','+str(l[1])+','+str(l[2])+','+str(l[3])
+        print (str(l[0])+','+str(l[1])+','+str(l[2])+','+str(l[3])ZZ)
 # retrieves the data from buffer, formats the output
 def doWork(lineNum, d, temp, lm, corrected, lg):
     l = d[lineNum]
